@@ -1,6 +1,5 @@
 #HowLongWillItTakeToReadThis.js
 ###### A jquery plugin for calcuating how long it will take to read an given article
-![screenshot](https://s3-us-west-2.amazonaws.com/droplr.storage/files/acc_38447/tvbj?AWSAccessKeyId=AKIAJSVQN3Z4K7MT5U2A&Expires=1386698172&Signature=PuCaaLNGG0xhBEZ4Cfb5RzNjCig%3D&response-content-disposition=inline%3B%20filename%3DScreen%2520Shot%25202013-12-10%2520at%252016.54.24.png%3B%20filename%2A%3DUTF-8%2527%2527Screen%2520Shot%25202013-12-10%2520at%252016.54.24.png)
 ---
 ###How To
 Include the js file. 
