@@ -12,8 +12,9 @@
 
         var wpm = settings.wpm;
         var count = this.text().replace( /[^\w ]/g, "" ).split( /\s+/ ).length
-        var calc = count / wpm;
+        var calc = parseFloat(count / wpm).toFixed(2);
         var minutes = calc.toString().split('.')[0];
+        var seconds = (calc.toString().split('.')[1] * .01) * 60;
         var hours = 0;
 
         if ( minutes > 60 && settings.format == 'hours'){
@@ -26,11 +27,19 @@
                 if ( hours > 0 ){
                     $(settings.label).text(hours+' hr '+minutes+' min read')
                 }else{
-                    $(settings.label).text(minutes+' min read')
+                    if ( minutes < 1 ){
+                        $(settings.label).text(Math.round(seconds)+' sec read')
+                    }else{
+                        $(settings.label).text(minutes+' min read')
+                    }
                 }
                 return
             default:
-                $(settings.label).text(minutes+' min read')
+                if ( minutes < 1 ){
+                    $(settings.label).text(Math.round(seconds)+' sec read')
+                }else{
+                    $(settings.label).text(minutes+' min read')
+                }
                 return
         }
     }
